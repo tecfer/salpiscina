@@ -54,8 +54,11 @@ public class MainActivity extends AppCompatActivity {
             double salInicial = ppmInicial * 0.001;
 
             // Cálculo de la cantidad mínima y máxima de sal en kg (redondeado a número entero)
-            int minSal = (int) Math.round((rangoConcentracionMin * metrosCuadrados) - salInicial);
-            int maxSal = (int) Math.round((rangoConcentracionMax * metrosCuadrados) - salInicial);
+            int minSal = (int) Math.round((rangoConcentracionMin - salInicial) * metrosCuadrados);
+            int maxSal = (int) Math.round((rangoConcentracionMax  - salInicial) * metrosCuadrados);
+
+            minSal = Math.max(minSal, 0);
+            maxSal = Math.max(maxSal, 0);
 
             int minSacos = (int) Math.ceil(minSal / 25);
             int maxSacos = (int) Math.ceil(maxSal / 25);
