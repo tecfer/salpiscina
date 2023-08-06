@@ -1,6 +1,12 @@
 *.iml
 .gradle
-/local.properties
+build/
+*.log
+*.aab
+*.apk
+google-services.json
+output.json
+local.properties
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
@@ -12,4 +18,4 @@
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+
