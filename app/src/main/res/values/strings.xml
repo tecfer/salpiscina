@@ -12,6 +12,8 @@
     <string name="text_m3">M³ Piscina</string>
     <string name="hint_m3">Introduce el número de M³</string>
     <string name="about">Acerca de</string>
+    <string name="visiturl">Visita http://tecfer.es</string>
+    <string name="url">http://tecfer.es</string>
     <string name="help">Ayuda</string>
     <string name="help_text">Calcula la cantidad de sal a añadir a la piscina para cloradores salinos
 

@@ -1,6 +1,7 @@
 package es.tecfer.salpiscina;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -44,7 +45,10 @@ public class HelpActivity extends AppCompatActivity {
             return true;
         } else if (id == R.id.action_about) {
             // Lógica para "Acerca de"
-            Toast.makeText(this, getString(R.string.about), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.visiturl), Toast.LENGTH_SHORT).show();
+            String url = getString(R.string.url);
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
             return true;
         } else if (id == R.id.action_help) {
             // Lógica para "Ayuda"
