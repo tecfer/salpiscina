@@ -10,8 +10,8 @@ android {
         applicationId "es.tecfer.salpiscina"
         minSdk 24
         targetSdk 33
-        versionCode 20230518
-        versionName "1.0"
+        versionCode 20230806
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

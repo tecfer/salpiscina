@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sal inicial Piscina"
+        android:text="@string/init"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginTop="26dp"
@@ -26,13 +26,13 @@
         android:layout_marginLeft="26dp"
         android:layout_marginTop="6dp"
         android:layout_marginRight="26dp"
-        android:hint="Introduce el valor actual (ppm)"
+        android:hint="@string/actual"
         android:inputType="numberDecimal"
         android:padding="16dp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="M³ Piscina"
+        android:text="@string/text_m3"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
@@ -42,22 +42,22 @@
         android:id="@+id/metros_cuadrados_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Introduce el número de metros cuadrados"
-        android:inputType="numberDecimal"
-        android:padding="16dp"
         android:layout_marginLeft="26dp"
         android:layout_marginTop="6dp"
-        android:layout_marginRight="26dp" />
+        android:layout_marginRight="26dp"
+        android:hint="@string/hint_m3"
+        android:inputType="numberDecimal"
+        android:padding="16dp" />
 
     <Button
-        android:id="@+id/calculate_button"
+        android:id="@+id/b_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="26dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="26dp"
         android:padding="26dp"
-        android:text="Calcular" />
+        android:text="@string/calc" />
 
     <TextView
         android:id="@+id/result_text_view"
@@ -68,5 +68,39 @@
         android:layout_marginLeft="26dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="26dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="26dp">
+
+        <Button
+            android:id="@+id/b_copy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="6dp"
+            android:text="@string/copy" />
+
+        <!-- Espacio entre botones -->
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent" />
+
+
+        <Button
+            android:id="@+id/b_whatsapp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="6dp"
+            android:text="@string/send" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

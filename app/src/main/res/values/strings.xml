@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Sal Piscina</string>
+    <string name="calc">Calcular</string>
+    <string name="send">Enviar</string>
+    <string name="copy">Copiar</string>
+    <string name="copy_msg">Copiado al portapapeles</string>
+    <string name="copy_msg_error">Error al copiar el texto en el portapapeles</string>
+    <string name="error">Error</string>
+    <string name="init">Sal inicial Piscina</string>
+    <string name="actual">Introduce el valor actual (ppm)</string>
+    <string name="text_m3">M³ Piscina</string>
+    <string name="hint_m3">Introduce el número de metros cuadrados</string>
 </resources>
