@@ -1,19 +1,24 @@
 package es.tecfer.salpiscina;
 
-import static es.tecfer.salpiscina.R.id.b_calculate;
+
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         ppmInput = findViewById(R.id.ppm_input);
         metrosCuadradosInput = findViewById(R.id.metros_cuadrados_input);
@@ -52,6 +60,33 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) { send_whatsapp(); }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.calc) {
+            // Lógica para "Calcular"
+            Toast.makeText(this, getString(R.string.calc), Toast.LENGTH_SHORT).show();
+            calculateSal();
+            return true;
+        }else if (id == R.id.action_about) {
+            // Lógica para "Acerca de"
+            Toast.makeText(this, getString(R.string.about), Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (id == R.id.action_help) {
+            // Lógica para "Ayuda"
+            Toast.makeText(this, getString(R.string.help), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, HelpActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void calculateSal() {
@@ -84,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
             resultTextView.setText(result);
         } catch (NumberFormatException e) {
-            resultTextView.setText("Error: Los valores ingresados no son válidos. Asegúrate de ingresar números.");
+            resultTextView.setText(getString(R.string.error_calc));
         }
     }
 

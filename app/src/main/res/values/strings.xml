@@ -6,8 +6,15 @@
     <string name="copy_msg">Copiado al portapapeles</string>
     <string name="copy_msg_error">Error al copiar el texto en el portapapeles</string>
     <string name="error">Error</string>
+    <string name="error_calc">Error: Los valores ingresados no son válidos. Asegúrate de ingresar números.</string>
     <string name="init">Sal inicial Piscina</string>
     <string name="actual">Introduce el valor actual (ppm)</string>
     <string name="text_m3">M³ Piscina</string>
-    <string name="hint_m3">Introduce el número de metros cuadrados</string>
+    <string name="hint_m3">Introduce el número de M³</string>
+    <string name="about">Acerca de</string>
+    <string name="help">Ayuda</string>
+    <string name="help_text">Calcula la cantidad de sal a añadir a la piscina para cloradores salinos
+
+        En una piscina de agua salada, la concentración de sal debe situarse entre 4 y 7 ppm (partes por millón). Esto equivale a decir que tenemos que añadir al agua entre 4 y 7 kilos de sal por cada metro cúbico de agua.</string>
+
 </resources>
